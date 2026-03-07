@@ -14,15 +14,14 @@ export const AboutSection = () => {
             </h3>
             <p className="text-muted-foreground">
               Hello I'm a Passionate Third Year Btech student in computer
-              science and Engineering ,I specialize in creating responsive
-              ,accessible and performant web applications using modern
-              technologies.
+              science and Engineering.I enjoy working with Data Structures and
+              Algorithms and regularly practice on LeetCode.
             </p>
             <p className="text-muted-foreground">
-              I'm Passionate about creating elegant solutions to complex
-              problems and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              I am also passionate about building intelligent systems and
+              exploring how AI can be used to solve real-world problems. I enjoy
+              learning new technologies and working on projects that combine
+              software development with AI concepts.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -30,7 +29,7 @@ export const AboutSection = () => {
                 Get In Touch
               </a>
               <a
-                href="https://ibb.co/xt5sM17q"
+                href="/Ashutosh_resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                 target="_blank"
               >
@@ -74,10 +73,10 @@ export const AboutSection = () => {
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">DSA </h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion using agile
-                    methodologies.
+                    Solved 500+ problems on various platforms such as LeetCode focusing on Data Structures,
+Algorithms, and problem-solving techniques.
                   </p>
                 </div>
               </div>

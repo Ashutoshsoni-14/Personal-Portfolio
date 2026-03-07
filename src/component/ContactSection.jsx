@@ -40,9 +40,9 @@ export const ContactSection = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
@@ -107,10 +107,16 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/ashutosh-soni-31964b284/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/ashutosh-soni-31964b284/"
+                  target="_blank"
+                >
                   <Linkedin size={30} />
                 </a>
-                <a href="https://www.instagram.com/ur_ashutosh_/" target="_blank">
+                <a
+                  href="https://www.instagram.com/__ashhutoshh/"
+                  target="_blank"
+                >
                   <Instagram size={30} />
                 </a>
                 <a href="https://x.com/Ashutosh_147" target="_blank">
@@ -118,6 +124,15 @@ export const ContactSection = () => {
                 </a>
                 <a href="#" target="_blank">
                   <Facebook size={30} />
+                </a>
+                <a
+                  href="https://leetcode.com/u/Ashutosh_soni14/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                    width="30"
+                  ></img>
                 </a>
               </div>
             </div>
@@ -179,10 +194,10 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "w-full cosmic-button flex items-center justify-center gap-2"
+                  "w-full cosmic-button flex items-center justify-center gap-2",
                 )}
               >
-                {isSubmitting? "Sending":"Send a Message"}
+                {isSubmitting ? "Sending" : "Send a Message"}
                 <Send size={16} />
               </button>
             </form>
