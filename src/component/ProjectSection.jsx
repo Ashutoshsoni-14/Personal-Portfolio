@@ -3,12 +3,12 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Email validator",
-    image: "/Projects/pro1.png",
-    description: "A email validator website to validate emails",
-    tags: ["Html", "Css", "Javascript"],
-    demoUrl: "https://email-validator-topaz.vercel.app/",
-    gitHuburl: "https://github.com/Ashutoshsoni-14/Email-validator",
+    title: "Leetcode-Ai-Mentor",
+    image: "/Projects/pro4.png",
+    description: "AI mentor for solving and improving LeetCode problems.",
+    tags: ["react", "mongodb", "node.js"],
+    demoUrl: "https://leetcode-ai-mentor.vercel.app/",
+    gitHuburl: "https://github.com/Ashutoshsoni-14/leetcode-ai-mentor",
   },
   {
     id: 2,
