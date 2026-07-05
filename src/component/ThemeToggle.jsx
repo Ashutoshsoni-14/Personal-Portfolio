@@ -1,18 +1,19 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-import {cn} from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
+    if (storedTheme === "light") {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
     }
   }, []);
 
@@ -27,19 +28,21 @@ export const ThemeToggle = () => {
       setIsDarkMode(true);
     }
   };
+
   return (
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden"
+        "fixed top-6 right-6 z-50 p-3 rounded-full transition-all duration-300",
+        "bg-white/5 border border-white/10 backdrop-blur-md text-foreground",
+        "hover:bg-white/15 hover:scale-110 active:scale-95 shadow-lg shadow-black/20"
       )}
+      aria-label="Toggle Theme"
     >
-      {" "}
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-5 w-5 text-yellow-400 transition-transform duration-500 hover:rotate-45" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-5 w-5 text-blue-400 transition-transform duration-500 hover:-rotate-12" />
       )}
     </button>
   );
