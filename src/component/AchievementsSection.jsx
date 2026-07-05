@@ -71,20 +71,20 @@ export const AchievementsSection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className={`p-6 md:p-8 rounded-2xl bg-white/[0.01] border backdrop-blur-md transition-all duration-300 hover:bg-white/[0.02] shadow-2xl flex flex-col justify-between ${item.glow}`}
+                className={`p-6 md:p-8 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md transition-all duration-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] shadow-2xl flex flex-col justify-between ${item.glow}`}
               >
                 <div className="space-y-4 text-left">
                   <div className="flex items-center justify-between">
                     <div className={`p-3 rounded-2xl bg-gradient-to-br ${item.color} text-background shadow-lg`}>
                       <item.icon size={22} className="text-white" />
                     </div>
-                    <span className="text-sm font-bold bg-white/5 border border-white/10 px-3 py-1 rounded-full text-foreground/80">
+                    <span className="text-sm font-bold bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-3 py-1 rounded-full text-foreground/80">
                       {item.value}
                     </span>
                   </div>
                   
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-white tracking-tight">
+                    <h3 className="text-xl font-bold text-foreground tracking-tight">
                       {item.title}
                     </h3>
                     <p className="text-foreground/75 leading-relaxed text-sm md:text-base">
@@ -93,9 +93,9 @@ export const AchievementsSection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-white/5 mt-6 pt-4 flex items-center justify-between text-xs text-foreground/40 font-semibold uppercase tracking-wider">
+                <div className="border-t border-black/5 dark:border-white/5 mt-6 pt-4 flex items-center justify-between text-xs text-foreground/40 font-semibold uppercase tracking-wider">
                   <span>Status</span>
-                  <span className="text-primary-foreground font-bold text-[10px] tracking-widest px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
+                  <span className="text-primary font-bold text-[10px] tracking-widest px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
                     Verified
                   </span>
                 </div>

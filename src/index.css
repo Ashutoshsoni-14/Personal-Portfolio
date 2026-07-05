@@ -68,12 +68,12 @@
 }
 @layer base{
   :root{
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 6%;
-    --primary: 263 90% 65%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --primary: 250 65% 60%;
     --primary-foreground: 210 40% 98%;
-    --border: 240 6% 15%;
+    --border: 214 32% 91%;
   }
 
   .dark{
@@ -94,7 +94,6 @@
   body{
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1,"calt" 1;
-    background-color: #050507;
   }
   
   /* Custom modern scrollbar */
@@ -103,15 +102,15 @@
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #050507;
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1f1f2e;
+    background: rgba(167, 139, 250, 0.15);
     border-radius: 4px;
     transition: background 0.3s ease;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3b3b4f;
+    background: rgba(167, 139, 250, 0.4);
   }
 }
 @utility container{
@@ -142,7 +141,7 @@
   @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10;
 }
 @utility gradient-border{
-  @apply relative rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-md;
+  @apply relative rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-md;
 }
 @utility cosmic-button{
   @apply px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-[#8b5cf6] text-primary-foreground font-semibold

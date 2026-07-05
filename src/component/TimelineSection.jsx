@@ -9,7 +9,7 @@ const timelineData = [
     subtitle: "B.Tech in CSE Entry",
     description: "Started B.Tech in Computer Science & Engineering. Learned programming fundamentals (C/C++), Object-Oriented Programming, and laid down strong academic foundations.",
     icon: GraduationCap,
-    color: "bg-primary/20 text-primary border-primary/30"
+    nodeStyles: "text-primary border-primary/30"
   },
   {
     year: "2024",
@@ -17,7 +17,7 @@ const timelineData = [
     subtitle: "Web Technologies & Layouts",
     description: "Mastered responsive layouts, HTML5, CSS3, ES6 JavaScript, and Tailwind CSS. Built mini-projects like YouTube clone to perfect responsive visual design and interactivity.",
     icon: Globe,
-    color: "bg-accent-blue/20 text-accent-blue border-accent-blue/30"
+    nodeStyles: "text-blue-600 dark:text-accent-blue border-blue-600/20 dark:border-accent-blue/30"
   },
   {
     year: "2025",
@@ -25,7 +25,7 @@ const timelineData = [
     subtitle: "MERN Stack & Problem Solving",
     description: "Acquired MERN stack development skills (React, Express, Node.js, MongoDB). Deeply practiced Data Structures and Algorithms, solving 500+ problems on Leetcode and other platforms.",
     icon: Code2,
-    color: "bg-accent-purple/20 text-accent-purple border-accent-purple/30"
+    nodeStyles: "text-purple-600 dark:text-accent-purple border-purple-600/20 dark:border-accent-purple/30"
   },
   {
     year: "2026",
@@ -33,7 +33,7 @@ const timelineData = [
     subtitle: "Modern Engineering & Optimization",
     description: "Developed AI-integrated tools like Leetcode-Ai-Mentor. Explored Microsoft Azure AI Essentials and forged robust API architectures, preparing for professional engineering placements.",
     icon: Cpu,
-    color: "bg-pink-500/20 text-pink-500 border-pink-500/30"
+    nodeStyles: "text-rose-600 dark:text-pink-500 border-rose-600/20 dark:border-pink-500/30"
   }
 ];
 
@@ -63,7 +63,7 @@ export const TimelineSection = () => {
         </motion.div>
 
         {/* Vertical Timeline container */}
-        <div className="relative border-l border-white/10 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12 py-4 text-left">
+        <div className="relative border-l border-black/10 dark:border-white/10 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12 py-4 text-left">
           {/* Animated Line overlay */}
           <motion.div 
             className="absolute left-0 top-0 w-[1px] bg-gradient-to-b from-primary via-accent-purple to-accent-blue origin-top"
@@ -83,12 +83,12 @@ export const TimelineSection = () => {
                 className="relative group"
               >
                 {/* Timeline Node Circle */}
-                <div className={`absolute left-[-41px] md:left-[-57px] top-1.5 p-2 rounded-full border bg-[#050507] z-10 transition-all duration-300 group-hover:scale-115 group-hover:border-primary/60 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${item.color.split(" ")[1]} ${item.color.split(" ")[2]}`}>
+                <div className={`absolute left-[-41px] md:left-[-57px] top-1.5 p-2 rounded-full border bg-background border-black/10 dark:border-white/10 z-10 transition-all duration-300 group-hover:scale-115 group-hover:border-primary/60 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${item.nodeStyles}`}>
                   <item.icon size={16} />
                 </div>
 
                 {/* Card Container */}
-                <div className="p-6 md:p-8 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md hover:border-white/15 hover:bg-white/[0.02] transition-all duration-300 shadow-xl relative overflow-hidden">
+                <div className="p-6 md:p-8 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-black/15 dark:hover:border-white/15 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition-all duration-300 shadow-xl relative overflow-hidden">
                   {/* Decorative faint glow */}
                   <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
@@ -97,7 +97,7 @@ export const TimelineSection = () => {
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20 mb-2 md:mb-0">
                         {item.year}
                       </span>
-                      <h3 className="text-xl font-bold text-white tracking-tight mt-1 group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-bold text-foreground tracking-tight mt-1 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
                     </div>

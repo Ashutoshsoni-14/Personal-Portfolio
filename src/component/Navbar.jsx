@@ -18,16 +18,10 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        setScrollProgress(window.scrollY / totalHeight);
-      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -60,11 +54,6 @@ export const Navbar = () => {
 
   return (
     <>
-      {/* Scroll Progress Bar */}
-      <div 
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-accent-purple to-accent-blue z-50 origin-left"
-        style={{ transform: `scaleX(${scrollProgress})` }}
-      />
 
       <nav
         className={cn(
@@ -79,12 +68,12 @@ export const Navbar = () => {
             className="text-2xl font-bold tracking-tight text-glow text-foreground flex items-center gap-1.5 hover:opacity-90 transition-opacity"
             href="#hero"
           >
-            <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Ashutosh's</span>
+            <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Ashutosh's</span>
             <span className="bg-gradient-to-r from-primary to-[#8b5cf6] bg-clip-text text-transparent">Portfolio</span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-1.5 p-1.5 bg-white/[0.03] border border-white/5 rounded-full backdrop-blur-md">
+          <div className="hidden lg:flex items-center space-x-1.5 p-1.5 bg-black/5 dark:bg-white/[0.03] border border-black/5 dark:border-white/5 rounded-full backdrop-blur-md">
             {navItems.map((item, key) => (
               <a
                 key={key}
@@ -93,7 +82,7 @@ export const Navbar = () => {
                   "px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 relative",
                   activeSection === item.href.replace("#", "")
                     ? "text-primary-foreground font-semibold"
-                    : "text-foreground/75 hover:text-foreground hover:bg-white/5"
+                    : "text-foreground/75 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
                 )}
               >
                 {activeSection === item.href.replace("#", "") && (
@@ -111,7 +100,7 @@ export const Navbar = () => {
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="lg:hidden p-2 text-foreground z-50 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-colors"
+            className="lg:hidden p-2 text-foreground z-50 bg-black/5 dark:bg-white/5 rounded-full border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
             aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -125,7 +114,7 @@ export const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-x-0 top-0 pt-20 pb-8 px-6 bg-background/95 border-b border-white/10 backdrop-blur-lg z-30 flex flex-col items-center shadow-2xl"
+                className="fixed inset-x-0 top-0 pt-20 pb-8 px-6 bg-background/95 border-b border-black/10 dark:border-white/10 backdrop-blur-lg z-30 flex flex-col items-center shadow-2xl"
               >
                 <div className="flex flex-col space-y-4 w-full text-center">
                   {navItems.map((item, key) => (
@@ -136,7 +125,7 @@ export const Navbar = () => {
                         "py-3 text-lg font-medium rounded-xl transition-all duration-300",
                         activeSection === item.href.replace("#", "")
                           ? "text-primary bg-primary/10 font-semibold"
-                          : "text-foreground/80 hover:text-foreground hover:bg-white/5"
+                          : "text-foreground/80 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
                       )}
                       onClick={() => setIsMenuOpen(false)}
                     >

@@ -62,10 +62,10 @@ const Certifications = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -5 }}
               onClick={() => setSelectedCert(cert)}
-              className={`group cursor-pointer rounded-2xl overflow-hidden bg-white/[0.01] border backdrop-blur-md transition-all duration-300 flex flex-col justify-between shadow-2xl relative ${cert.color}`}
+              className={`group cursor-pointer rounded-2xl overflow-hidden bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md transition-all duration-300 flex flex-col justify-between shadow-2xl relative ${cert.color}`}
             >
               {/* Image Preview Container */}
-              <div className="p-4 bg-white/[0.02] border-b border-white/5 relative overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <div className="p-4 bg-black/[0.02] dark:bg-white/[0.02] border-b border-black/5 dark:border-b-white/5 relative overflow-hidden aspect-[4/3] flex items-center justify-center">
                 <img
                   src={cert.image}
                   alt={cert.title}
@@ -83,7 +83,7 @@ const Certifications = () => {
               {/* Content Description */}
               <div className="p-6 text-left flex-grow flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-white tracking-tight group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-lg font-bold text-foreground tracking-tight group-hover:text-primary transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
 
@@ -93,7 +93,7 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="border-t border-white/5 mt-6 pt-4 flex items-center justify-between">
+                <div className="border-t border-black/5 dark:border-white/5 mt-6 pt-4 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs text-foreground/50">
                     <Calendar size={12} />
                     <span>{cert.date}</span>
@@ -125,18 +125,18 @@ const Certifications = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="relative max-w-4xl w-full bg-card rounded-2xl border border-white/10 overflow-hidden shadow-2xl p-2"
+              className="relative max-w-4xl w-full bg-card rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden shadow-2xl p-2"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header inside modal */}
-              <div className="flex items-center justify-between p-4 border-b border-white/5 bg-white/[0.01]">
+              <div className="flex items-center justify-between p-4 border-b border-black/5 dark:border-b-white/5 bg-black/[0.01] dark:bg-white/[0.01]">
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-white leading-snug">{selectedCert.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground leading-snug">{selectedCert.title}</h3>
                   <p className="text-xs text-foreground/50">{selectedCert.issuer} • {selectedCert.date}</p>
                 </div>
                 <button
                   onClick={() => setSelectedCert(null)}
-                  className="p-2 bg-white/5 border border-white/10 hover:bg-white/10 rounded-full text-foreground transition-colors cursor-pointer"
+                  className="p-2 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 rounded-full text-foreground transition-colors cursor-pointer"
                   aria-label="Close modal"
                 >
                   <X size={18} />

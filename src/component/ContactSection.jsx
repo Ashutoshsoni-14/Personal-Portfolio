@@ -119,16 +119,16 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 space-y-8 text-left"
           >
-            <h3 className="font-bold text-2xl text-white tracking-tight">Contact Information</h3>
+            <h3 className="font-bold text-2xl text-foreground tracking-tight">Contact Information</h3>
             
             <div className="space-y-6">
               {/* Email Card */}
-              <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md hover:border-primary/20 transition-all duration-300 flex items-start gap-4 group">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-primary/20 transition-all duration-300 flex items-start gap-4 group">
                 <div className="p-3.5 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-grow">
-                  <h4 className="font-bold text-white text-sm">Email</h4>
+                  <h4 className="font-bold text-foreground text-sm">Email</h4>
                   <div className="flex items-center gap-2 mt-1">
                     <a
                       href="mailto:ashutoshhh.14@gmail.com"
@@ -138,7 +138,7 @@ export const ContactSection = () => {
                     </a>
                     <button
                       onClick={handleCopyEmail}
-                      className="p-1 rounded-md hover:bg-white/10 text-foreground/40 hover:text-white transition-colors cursor-pointer"
+                      className="p-1 rounded-md hover:bg-black/10 dark:hover:bg-white/10 text-foreground/40 hover:text-foreground transition-colors cursor-pointer"
                       title="Copy Email"
                     >
                       {copiedEmail ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
@@ -148,12 +148,12 @@ export const ContactSection = () => {
               </div>
 
               {/* Phone Card */}
-              <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md hover:border-accent-purple/20 transition-all duration-300 flex items-start gap-4 group">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-accent-purple/20 transition-all duration-300 flex items-start gap-4 group">
                 <div className="p-3.5 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:scale-110 transition-transform duration-300">
                   <Phone className="h-5 w-5 text-accent-purple" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-sm">Phone</h4>
+                  <h4 className="font-bold text-foreground text-sm">Phone</h4>
                   <a
                     href="tel:+916265758558"
                     className="text-foreground/75 hover:text-accent-purple transition-colors text-sm mt-1 block font-medium"
@@ -164,12 +164,12 @@ export const ContactSection = () => {
               </div>
 
               {/* Location Card */}
-              <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md hover:border-accent-blue/20 transition-all duration-300 flex items-start gap-4 group">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-accent-blue/20 transition-all duration-300 flex items-start gap-4 group">
                 <div className="p-3.5 rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-110 transition-transform duration-300">
                   <MapPinHouse className="h-5 w-5 text-accent-blue" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-sm">Location</h4>
+                  <h4 className="font-bold text-foreground text-sm">Location</h4>
                   <span className="text-foreground/75 text-sm mt-1 block font-medium">
                     Datia (MP) India
                   </span>
@@ -179,7 +179,7 @@ export const ContactSection = () => {
 
             {/* Socials Connection */}
             <div className="pt-4">
-              <h4 className="font-bold text-white text-base mb-4">Connect With Me</h4>
+              <h4 className="font-bold text-foreground text-base mb-4">Connect With Me</h4>
               <div className="flex flex-wrap gap-3">
                 {[
                   { icon: Linkedin, link: "https://www.linkedin.com/in/ashutosh-soni-31964b284/", color: "hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5]" },
@@ -188,12 +188,12 @@ export const ContactSection = () => {
                   { icon: Facebook, link: "#", color: "hover:bg-[#1877f2] hover:text-white hover:border-[#1877f2]" },
                 ].map((social, idx) => (
                   <a
-                    key={idx}
+                    key={social.link + idx}
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "p-3 rounded-xl bg-white/5 border border-white/10 text-foreground/70 transition-all duration-300 hover:scale-110 flex items-center justify-center",
+                      "p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-foreground/70 transition-all duration-300 hover:scale-110 flex items-center justify-center",
                       social.color
                     )}
                   >
@@ -206,14 +206,14 @@ export const ContactSection = () => {
                   href="https://leetcode.com/u/Ashutosh_soni14/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-white/5 border border-white/10 text-foreground/70 transition-all duration-300 hover:scale-110 hover:bg-[#ffa116] hover:text-black hover:border-[#ffa116] flex items-center justify-center group"
+                  className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-foreground/70 transition-all duration-300 hover:scale-110 hover:bg-[#ffa116] dark:hover:bg-[#ffa116] hover:text-black dark:hover:text-black hover:border-[#ffa116] dark:hover:border-[#ffa116] flex items-center justify-center group"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
                     width="20"
                     height="20"
                     alt="LeetCode logo"
-                    className="invert group-hover:invert-0 transition-all duration-300"
+                    className="dark:invert group-hover:invert-0 transition-all duration-300"
                   />
                 </a>
               </div>
@@ -225,11 +225,11 @@ export const ContactSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="lg:col-span-7 bg-white/[0.01] border border-white/5 rounded-3xl p-8 backdrop-blur-md shadow-2xl relative"
+            className="lg:col-span-7 bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 rounded-3xl p-8 backdrop-blur-md shadow-2xl relative"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
             
-            <h3 className="mb-6 text-2xl font-bold text-white text-left tracking-tight">Send a Message</h3>
+            <h3 className="mb-6 text-2xl font-bold text-foreground text-left tracking-tight">Send a Message</h3>
             
             <form className="space-y-5 text-left" onSubmit={onSubmit}>
               <div className="space-y-2">
@@ -244,7 +244,7 @@ export const ContactSection = () => {
                   name="name"
                   id="name"
                   required
-                  className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/[0.02] focus:bg-white/[0.04] text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-foreground/35"
+                  className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] focus:bg-black/[0.04] dark:focus:bg-white/[0.04] text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-foreground/35"
                   placeholder="Ashutosh Soni"
                 />
               </div>
@@ -261,7 +261,7 @@ export const ContactSection = () => {
                   name="email"
                   id="email"
                   required
-                  className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/[0.02] focus:bg-white/[0.04] text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-foreground/35"
+                  className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] focus:bg-black/[0.04] dark:focus:bg-white/[0.04] text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-foreground/35"
                   placeholder="hello@example.com"
                 />
               </div>
@@ -278,7 +278,7 @@ export const ContactSection = () => {
                   id="message"
                   required
                   rows={4}
-                  className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/[0.02] focus:bg-white/[0.04] text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none placeholder:text-foreground/35"
+                  className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] focus:bg-black/[0.04] dark:focus:bg-white/[0.04] text-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none placeholder:text-foreground/35"
                   placeholder="Hello, I'd love to collaborate on..."
                 />
               </div>

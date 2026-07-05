@@ -89,7 +89,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 text-sm font-semibold rounded-full border transition-all duration-300 capitalize cursor-pointer",
                 activeCategory === category
                   ? "bg-primary border-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]"
-                  : "bg-white/[0.02] border-white/5 text-foreground/80 hover:text-white hover:bg-white/[0.05]"
+                  : "bg-black/5 dark:bg-white/[0.02] border-black/5 dark:border-white/5 text-foreground/80 hover:text-foreground hover:bg-black/10 dark:hover:bg-white/[0.05]"
               )}
               onClick={() => setActiveCategory(category)}
             >
@@ -111,7 +111,7 @@ export const SkillsSection = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: key * 0.05 }}
               onMouseMove={handleMouseMove}
-              className="group relative bg-white/[0.01] border border-white/5 rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 hover:translate-y-[-2px]"
+              className="group relative bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 hover:translate-y-[-2px]"
             >
               {/* Radial glow gradient on mouse move */}
               <div 
@@ -122,11 +122,11 @@ export const SkillsSection = () => {
               />
 
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-white/5 text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+                <div className="p-2.5 rounded-xl bg-black/5 dark:bg-white/5 text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                   <skill.icon size={20} className="text-primary" />
                 </div>
                 <div className="text-left">
-                  <h3 className="font-bold text-white text-base leading-tight group-hover:text-primary transition-colors">{skill.name}</h3>
+                  <h3 className="font-bold text-foreground text-base leading-tight group-hover:text-primary transition-colors">{skill.name}</h3>
                   <span className="text-xs text-foreground/50 font-medium tracking-wide uppercase">{skill.category}</span>
                 </div>
               </div>
@@ -135,9 +135,9 @@ export const SkillsSection = () => {
               <div className="space-y-2 mt-4">
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-foreground/55 font-medium">Proficiency</span>
-                  <span className="text-white font-bold">{skill.level}%</span>
+                  <span className="text-foreground font-bold">{skill.level}%</span>
                 </div>
-                <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                <div className="w-full bg-black/5 dark:bg-white/5 h-2 rounded-full overflow-hidden">
                   <motion.div
                     className={cn("h-full rounded-full bg-gradient-to-r", skill.color)}
                     initial={{ width: 0 }}

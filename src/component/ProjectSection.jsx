@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index, isInView }) => {
       transition={{ duration: 0.6, delay: index * 0.15 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative bg-white/[0.01] border border-white/5 rounded-2xl overflow-hidden shadow-2xl flex flex-col h-full transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.02]"
+      className="group relative bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 rounded-2xl overflow-hidden shadow-2xl flex flex-col h-full transition-all duration-300 hover:border-primary/40 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]"
       style={{
         transform: "perspective(1000px) rotateX(var(--r-x, 0deg)) rotateY(var(--r-y, 0deg))",
         transformStyle: "preserve-3d",
@@ -78,10 +78,10 @@ const ProjectCard = ({ project, index, isInView }) => {
       }}
     >
       {/* Visual background glow inside card */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/[0.02] dark:from-white/[0.02] to-transparent pointer-events-none" />
 
       {/* Project Image / Placeholder */}
-      <div className="h-52 overflow-hidden bg-neutral-900 flex items-center justify-center relative border-b border-white/5">
+      <div className="h-52 overflow-hidden bg-neutral-900 flex items-center justify-center relative border-b border-black/5 dark:border-b-white/5">
         {!imgError && project.image ? (
           <img
             src={project.image}
@@ -93,13 +93,13 @@ const ProjectCard = ({ project, index, isInView }) => {
           <div className="w-full h-full bg-gradient-to-br from-primary/10 via-accent-purple/10 to-accent-blue/10 flex flex-col items-center justify-center p-6 relative">
             <div className="absolute inset-0 bg-grid-pattern opacity-10" />
             <Code2 size={44} className="text-primary mb-2 animate-float" />
-            <span className="text-sm font-semibold text-white/80 tracking-wide">{project.title}</span>
+            <span className="text-sm font-semibold text-foreground/80 tracking-wide">{project.title}</span>
             <span className="text-[10px] text-foreground/40 mt-1 uppercase tracking-widest">Interactive Sandbox</span>
           </div>
         )}
 
         {/* Top-Right Sparkle Decor */}
-        <div className="absolute top-4 right-4 p-1.5 rounded-full bg-black/60 border border-white/10 backdrop-blur-md text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-4 right-4 p-1.5 rounded-full bg-black/60 border border-black/10 dark:border-white/10 backdrop-blur-md text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Sparkles size={14} className="text-primary animate-pulse" />
         </div>
       </div>
@@ -119,7 +119,7 @@ const ProjectCard = ({ project, index, isInView }) => {
             ))}
           </div>
 
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors tracking-tight">
+          <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors tracking-tight">
             {project.title}
           </h3>
 
@@ -129,7 +129,7 @@ const ProjectCard = ({ project, index, isInView }) => {
         </div>
 
         {/* Buttons / Actions */}
-        <div className="flex items-center justify-between border-t border-white/5 pt-4 mt-auto">
+        <div className="flex items-center justify-between border-t border-black/5 dark:border-white/5 pt-4 mt-auto">
           <div className="flex gap-4">
             {project.demoUrl !== "#" && (
               <a
@@ -146,7 +146,7 @@ const ProjectCard = ({ project, index, isInView }) => {
               href={project.gitHuburl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground dark:hover:text-white transition-colors"
             >
               <Github size={16} />
               <span>Source</span>

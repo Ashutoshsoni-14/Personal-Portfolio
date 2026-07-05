@@ -51,7 +51,7 @@ export const HeroSection = () => {
     >
       {/* Animated Gradient Background Overlays */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.2] pointer-events-none z-0" />
-      
+
       <div className="absolute top-[20%] left-[20%] w-[350px] h-[350px] rounded-full bg-primary/20 blur-[100px] pointer-events-none animate-pulse-subtle" />
       <div className="absolute bottom-[20%] right-[20%] w-[350px] h-[350px] rounded-full bg-accent-purple/15 blur-[120px] pointer-events-none animate-pulse-subtle" style={{ animationDelay: "2s" }} />
 
@@ -59,7 +59,7 @@ export const HeroSection = () => {
       {floatingIcons.map((item, index) => (
         <motion.div
           key={index}
-          className="absolute hidden md:flex items-center justify-center p-4 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md shadow-2xl z-10"
+          className="absolute hidden md:flex items-center justify-center p-4 rounded-2xl bg-black/[0.01] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 backdrop-blur-md shadow-2xl z-10"
           style={{ left: item.x, top: item.y }}
           animate={{
             y: [0, -15, 0],
@@ -77,7 +77,7 @@ export const HeroSection = () => {
 
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          {/* Open to Opportunities Badge */}
+          {/* 404: Free Time Not Found */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,10 +88,10 @@ export const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            Open to Opportunities
+            404: Free Time Not Found
           </motion.div>
 
-          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-foreground leading-tight">
             <motion.span
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="h-8 md:h-10 text-xl md:text-3xl font-semibold bg-gradient-to-r from-accent-blue via-accent-purple to-accent-pink bg-clip-text text-transparent flex justify-center items-center gap-1.5"
+            className="h-8 md:h-10 text-xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-accent-blue dark:via-accent-purple dark:to-accent-pink bg-clip-text text-transparent flex justify-center items-center gap-1.5"
           >
             <span>I am a </span>
             <span className="border-r-2 border-primary pr-1 font-bold animate-pulse">
@@ -144,12 +144,12 @@ export const HeroSection = () => {
             <a href="#projects" className="cosmic-button flex items-center gap-2">
               <span>View My Work</span>
             </a>
-            
+
             <a
               href="/AshutoshCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
+              className="px-6 py-2.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
             >
               <FileText size={18} />
               <span>Resume</span>
@@ -159,7 +159,7 @@ export const HeroSection = () => {
               href="https://github.com/Ashutoshsoni-14"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
+              className="px-6 py-2.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
             >
               <Github size={18} />
               <span>GitHub</span>
@@ -169,7 +169,7 @@ export const HeroSection = () => {
               href="https://leetcode.com/u/Ashutosh_soni14/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
+              className="px-6 py-2.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 shadow-md"
             >
               <Award size={18} className="text-yellow-500" />
               <span>LeetCode</span>

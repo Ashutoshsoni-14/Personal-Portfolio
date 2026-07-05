@@ -68,7 +68,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-7 space-y-6 text-left"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
               Passionate Web Developer & Tech Enthusiast
             </h3>
             
@@ -106,7 +106,7 @@ export const AboutSection = () => {
               </a>
               <a
                 href="/AshutoshCV.pdf"
-                className="px-6 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2"
+                className="px-6 py-2.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -125,36 +125,36 @@ export const AboutSection = () => {
           >
             {/* Features */}
             <div className="space-y-4">
-              <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-primary/30 hover:bg-black/[0.02] dark:hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                   <Code size={22} />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg text-white">Web Development</h4>
+                  <h4 className="font-semibold text-lg text-foreground">Web Development</h4>
                   <p className="text-foreground/75 text-sm mt-1">
                     Creating responsive websites and web applications with modern frameworks.
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-accent-purple/30 hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-accent-purple/30 hover:bg-black/[0.02] dark:hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:scale-110 transition-transform">
                   <User size={22} />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg text-white">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg text-foreground">UI/UX Design</h4>
                   <p className="text-foreground/75 text-sm mt-1">
                     Design intuitive user interfaces and seamless user experience.
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-accent-blue/30 hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
+              <div className="p-5 rounded-2xl bg-black/[0.01] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 backdrop-blur-md hover:border-accent-blue/30 hover:bg-black/[0.02] dark:hover:bg-white/[0.04] transition-all duration-300 group flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-110 transition-transform">
                   <Briefcase size={22} />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg text-white">DSA</h4>
+                  <h4 className="font-semibold text-lg text-foreground">DSA</h4>
                   <p className="text-foreground/75 text-sm mt-1">
                     Solved 500+ problems on various platforms such as LeetCode focusing on Data Structures, Algorithms, and problem-solving techniques.
                   </p>
@@ -165,12 +165,12 @@ export const AboutSection = () => {
         </div>
 
         {/* Counters Grid */}
-        <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 pt-12 border-t border-white/5">
+        <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 pt-12 border-t border-black/5 dark:border-white/5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center p-4 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md"
+            className="text-center p-4 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md"
           >
             <div className="text-3xl md:text-5xl font-extrabold text-primary mb-1">
               <Counter value="10" suffix="+" />
@@ -182,7 +182,7 @@ export const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-center p-4 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md"
+            className="text-center p-4 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md"
           >
             <div className="text-3xl md:text-5xl font-extrabold text-accent-purple mb-1">
               <Counter value="500" suffix="+" />
@@ -194,7 +194,7 @@ export const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center p-4 rounded-2xl bg-white/[0.01] border border-white/5 backdrop-blur-md"
+            className="text-center p-4 rounded-2xl bg-black/[0.01] dark:bg-white/[0.01] border border-black/5 dark:border-white/5 backdrop-blur-md"
           >
             <div className="text-3xl md:text-5xl font-extrabold text-accent-blue mb-1">
               <Counter value="7.8" isFloat={true} />

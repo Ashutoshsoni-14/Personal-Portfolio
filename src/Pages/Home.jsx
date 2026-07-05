@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "../component/ThemeToggle";
 import { StarBackground } from "../component/StarBackground";
 import { Navbar } from "../component/Navbar";
+import { ScrollProgressBar } from "../component/ScrollProgressBar";
 import { HeroSection } from "../component/HeroSection";
 import { AboutSection } from "../component/AboutSection";
 import { SkillsSection } from "../component/SkillsSection";
@@ -88,10 +89,11 @@ const CustomCursor = () => {
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-[#050507] text-foreground overflow-x-hidden relative selection:bg-primary/20">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative selection:bg-primary/20">
       <CustomCursor />
       
       <ThemeToggle />
+      <ScrollProgressBar />
 
       <StarBackground />
 
